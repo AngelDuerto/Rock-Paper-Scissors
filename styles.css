@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+}
+
+body{
+    color: rgb(68, 60, 21);
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+    background-image: url(images/pattern.jpg);
+}
+
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: #fbf9f5e2;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#gameName{
+    font-size: 4rem;
+    color: rgb(68, 60, 21);
+    margin-bottom: 20px ;
+}
+
+/* Rock, Paper, and Scissors icons */
+.choices{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.choices label{
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    margin: 0 30px;
+    padding: 10px;
+    border-radius: 50%;
+    color: rgb(68, 60, 21);
+    background-color: rgb(246, 235, 204);
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.5s ease;
+}
+
+.choices label:hover{
+    background-color: rgb(249, 231, 169);
+    transform: scale(1.1);
+}
+
+.choices i {
+    padding: 20px;
+}
+
+/* edit radio imput to hide circle */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Player: text */
+#playerDisplay{
+    color: rgb(133, 103, 21);
+}
+
+/* Player:, and Computer:, display elements */
+#playerDisplay, #computerDisplay{
+font-size: 3.5rem;
+margin: 15px 0;
+}
+
+/* Win / lose / tie, display elements */
+#resultDisplay{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.scoreDisplay{
+    font-size: 2rem;
+    margin: 2px;
+}
+
+#playerScore{
+    color:rgb(133, 103, 21);
+}
+
+.greenText, #playerScoreDisplay{
+    color: rgb(30, 156, 30);
+}
+
+.redText, #computerScoreDisplay{
+    color: rgb(233, 40, 40);
+}
+
+#resetButton{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin-top: 20px;
+    background-color: rgb(246, 235, 204);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resetButton:hover{
+    background-color: rgb(249, 231, 169);
+}
+
+/* Footer */
+
+.ft p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fbf9f5a5;
+    padding: 10px;
+}
+
+/* Responsiveness */
+
+@media(min-width: 1024px){
+    /* reset button margin increase bottom*/
+    #resetButton{
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 768px){
+    /* Game name font smaller*/
+    #gameName{
+        font-size: 2.8rem;
+    }
+
+    /* Rock, Paper, and Scissors icons smaller and fixed padding */
+    .choices label{
+        font-size: 3.5rem ;
+        padding: 10px;
+    }
+
+    /* Display font smaller */
+    #playerDisplay, #computerDisplay, #resultDisplay{
+        font-size: 2rem;
+    }
+
+    /* Score display smaller */
+    .scoreDisplay{
+        font-size: 1.7rem;
+    }
+
+    /* Reset button smaller and fixed padding */
+    #resetButton{
+        font-size: 1.3rem;
+        padding: 8px 16px;
+    }
+}
+
+@media(max-width: 542px){
+    /* Game name font smaller*/
+    #gameName{
+        font-size: 2.5rem;
+    }
+
+    /* fixed direction and gap between icons */
+    .choices{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Rock, Paper, and Scissors icons smaller and fixed padding */
+    .choices label{
+        font-size: 3rem;
+        padding: 10px;
+    }
+
+    /* Display font smaller */
+    #playerDisplay, #computerDisplay, #resultDisplay{
+        font-size: 1.7rem;
+    }
+
+    /* Score display smaller */
+    .scoreDisplay{
+        font-size: 1.6rem;
+    }
+
+    /* Reset button smaller and fixed padding */
+    #resetButton{
+        font-size: 1.2rem;
+        padding: 6px 12px;
+        margin: 17px;
+    }
+
+    /* footer font smaller */
+    .ft{
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 414px){
+     /* reset button margin bottom increase */
+    #resetButton{
+        margin-bottom: 45px;
+    }
+}

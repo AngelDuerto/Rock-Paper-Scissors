@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <title>Rock - Paper - Scissors</title>
+</head>
+<body>
+    <main>
+        <h1 id="gameName">Rock - Paper - Scissors</h1>
+
+        <div class="choices">  
+        <label for="rock"> <input type="radio" id="rock" onchange="playGame(this)" value="rock" name="choices"><i class="fa-regular fa-hand-back-fist"></i></label>
+        <label for="paper"> <input type="radio" id="paper" onchange="playGame(this)" value="paper" name="choices"><i class="fa-regular fa-hand"></i></label>
+        <label for="scissors"> <input type="radio" id="scissors" onchange="playGame(this)" value="scissors" name="choices"><i class="fa-regular fa-hand-scissors"></i></label>
+        </div>
+
+        <div id="playerDisplay">Player:</div>
+        <div id="computerDisplay">Computer:</div>
+        <div id="resultDisplay"></div>
+
+        <div id="playerScore" class="scoreDisplay"> Player Score:
+            <span id="playerScoreDisplay">0</span>
+        </div>
+
+        <div class="scoreDisplay"> Computer Score:
+            <span id="computerScoreDisplay">0</span>
+        </div>
+
+        <div class="scoreDisplay">Tie Count:
+            <span id="tieCountDisplay">0</span>
+        </div>
+
+        <div>
+            <button onclick="resetGame()" id="resetButton"> Reset Game</button>
+        </div>
+    </main>
+
+    <footer class="ft">
+        <p> Copyright &copy; 2024 Created by Angel Duerto</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
